@@ -37,7 +37,7 @@
             <div>
                 <div class="navbar-nav">
                     <a class="nav-link active" id="home-link" href="index.php"> Agenda</a>
-                    <a class="nav-link active" id="home-link" href="create.php"> Adicionar Contato</a>
+                    <a class="nav-link active"  href="create.php"> Adicionar Contato</a>
 
                 </div>
             </div>

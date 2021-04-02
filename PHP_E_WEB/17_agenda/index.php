@@ -2,7 +2,6 @@
     include_once("templates/header.php");
 ?>
     <div class="container">
-    <p id="msg">TESTANDO MENSAGEM </p>
 
         <?php if(isset($printMsg) && $printMsg !=''): ?>
             <p id="msg"><?= $printMsg ?> </p>
@@ -31,9 +30,16 @@
                             <td scope="row"> <?= $contacts['phone'] ?>  </td>
                             <td class="actions">
                                 <a href="show.php?id=<?= $contacts['id'] ?>"> <i class="fas fa-eye check-icon"> </i> </a>
-                                <a href="#"> <i class="far fa-edit edit-icon"> </i> </a>
-                                <button type="submit" class="delete-btn"> <i class="fas fa-times delete-icon"> </i></button>
+                                <a href="edit.php?id=<?= $contacts['id'] ?>"> <i class="far fa-edit edit-icon"> </i> </a>
 
+                                <!-- <button type="submit" class="delete-btn"> <i class="fas fa-times delete-icon"> </i> </button> -->
+                                
+                                <form class="delete-form" action="config/process.php" method="POST" >
+                                    <input type="hidden" name="type" value="delete">
+                                    <input type="hidden" name="id" value="<?= $contacts["id"] ?>" >
+                                    <button type="submit" class="delete-btn"> <i class="fas fa-times delete-icon"> </i> </button>
+
+                                </form>
                             </td>
 
                         </tr>
